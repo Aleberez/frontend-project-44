@@ -4,3 +4,5 @@
 game-even: https://asciinema.org/a/WSA2pcuEhjv0Q0DzqllXmgN1i
 ###
 game-calc: https://asciinema.org/a/UXS3SdhjmfjlJMeiiD6X4uJJc
+###
+game-gcd: https://asciinema.org/a/EhFOuO13Jp2g82FGCEeUua3IC
