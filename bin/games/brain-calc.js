@@ -25,14 +25,13 @@ const getQuestion = () => {
   const firstRandomNumber = getRandomInteger();
   const secondRandomNumber = getRandomInteger();
   const randomOperator = getRandomOperator();
-  return `${firstRandomNumber} ${randomOperator} ${secondRandomNumber}`;
+  return [`${firstRandomNumber} ${randomOperator} ${secondRandomNumber}`, firstRandomNumber, secondRandomNumber, randomOperator];
 };
 
 const getQuestionAnswer = (questionData) => {
-  const questionDataArr = questionData.split(' ');
-  const firstNumber = Number(questionDataArr[0]);
-  const secondNumber = Number(questionDataArr[2]);
-  const operator = questionDataArr[1];
+  const firstNumber = Number(questionData[1]);
+  const secondNumber = Number(questionData[2]);
+  const operator = questionData[3];
   if (operator === '+') {
     return String(firstNumber + secondNumber);
   } if (operator === '-') {
