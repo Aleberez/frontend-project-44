@@ -11,7 +11,7 @@ const getRandomInteger = () => {
 const getQuestion = () => {
   const firstRandomNumber = getRandomInteger();
   const secondRandomNumber = getRandomInteger();
-  return `${firstRandomNumber} ${secondRandomNumber}`;
+  return [`${firstRandomNumber} ${secondRandomNumber}`, firstRandomNumber, secondRandomNumber];
 };
 
 const getNOD = (firstNumber, secondNumber) => {
@@ -25,10 +25,9 @@ const getNOD = (firstNumber, secondNumber) => {
   return result;
 };
 
-const getQuestionAnswer = (question) => {
-  const numbersArr = question.split(' ');
-  const firstNumber = numbersArr[0];
-  const secondNumber = numbersArr[1];
+const getQuestionAnswer = (numbersArr) => {
+  const firstNumber = numbersArr[1];
+  const secondNumber = numbersArr[2];
   const nod = getNOD(firstNumber, secondNumber);
   return String(nod);
 };
