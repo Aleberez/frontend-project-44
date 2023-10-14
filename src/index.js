@@ -14,7 +14,7 @@ const getGameCommonPart = (getQuestionAnswer, getQuestion, uniqeGameText) => {
   const maxGameIteration = 3;
   while (counter < maxGameIteration) {
     const question = getQuestion();
-    console.log(`Question: ${question}`);
+    console.log(`Question: ${question[0]}`);
     const questionAnswer = getQuestionAnswer(question);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer === questionAnswer) {
